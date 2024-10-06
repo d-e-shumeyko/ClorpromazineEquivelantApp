@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NeurolepticAppV3.MVVM.Views.MenuView"
+             Title="MenuView"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <Color x:Key="AppColor1">#3a1b8f</Color>
+        <Color x:Key="AppColor2">#5e39c4</Color>
+        <Color x:Key="AppColor3">#7951e8</Color>
+        <Color x:Key="AppColor4">#9772fc</Color>
+        <Color x:Key="TextColor">white</Color>
+    </ContentPage.Resources>
+
+
+    <Grid
+        ColumnDefinitions=".50*, .50*"
+        RowDefinitions=".1*, .6*, .2*">
+        <Label
+            Grid.ColumnSpan="2"
+            BackgroundColor="{StaticResource AppColor4}"
+            FontSize="Header"
+            HorizontalTextAlignment="Center"
+            Text="Калькулятор Аминазинового Эквивилента"
+            TextColor="{StaticResource TextColor}"
+            VerticalTextAlignment="Center"/>
+
+        <!--#region  NeuroCalculator -->
+        <Grid Grid.Row="1"
+              Padding="15"
+              RowDefinitions=".7*, .3*"             
+              BackgroundColor="{StaticResource AppColor1}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_Tapped"/>
+            </Grid.GestureRecognizers>
+            <Label
+     Grid.Row="1"
+     HorizontalOptions="Center"
+     Text="Калькулятор"
+     TextColor="{StaticResource TextColor}"
+     VerticalTextAlignment="Center"/>
+        </Grid>
+        
+        <!--#endregion-->
+        
+        <!--#region  MedicationLibrary -->
+        <Grid Grid.Row="1"
+        Grid.Column="1"
+Padding="15"
+RowDefinitions=".7*, .3*"
+BackgroundColor="{StaticResource AppColor2}">
+            <Label
+Grid.Row="1"
+HorizontalOptions="Center"
+Text="Библиотека"
+TextColor="{StaticResource TextColor}"
+VerticalTextAlignment="Center"/>
+        </Grid>
+        <!--#endregion-->
+        
+        <!--#region AboutUS -->
+        <Grid Grid.Row="2"
+              Grid.ColumnSpan="2"
+      Padding="15"
+      RowDefinitions=".7*, .3*"
+      BackgroundColor="{StaticResource AppColor3}">
+            <Label
+Grid.Row="1"
+HorizontalOptions="Center"
+Text="О Нас"
+TextColor="{StaticResource TextColor}"
+VerticalTextAlignment="Center"/>
+            <Image Source="pfur.png"
+                   Aspect="Center"></Image>
+        </Grid>
+        <!--#endregion-->
+
+    </Grid>
+</ContentPage>
