@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:NeurolepticAppV3.MVVM.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="NeurolepticAppV3.MVVM.Views.LibraryView"
+             Title="LibraryView"
+             x:DataType="model:LibraryViewModel"
+             >
+
+    <ContentPage.Resources>
+        <Color x:Key="AppColor1">#3a1b8f</Color>
+        <Color x:Key="AppColor2">#5e39c4</Color>
+        <Color x:Key="AppColor3">#7951e8</Color>
+        <Color x:Key="AppColor4">#9772fc</Color>
+        <Color x:Key="TextColor">white</Color>
+        
+    </ContentPage.Resources>
+
+    <VerticalStackLayout BackgroundColor="{StaticResource AppColor3}"
+                         Padding="10">
+        <Label Text="Библиотека Нейролептиков" 
+               TextColor="{StaticResource TextColor}"
+               BackgroundColor="{StaticResource AppColor1}"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="Medium"
+               />
+        <Picker ItemsSource="{Binding LibraryEntries}" 
+                BackgroundColor="{StaticResource AppColor3}"
+                TextColor="{StaticResource TextColor}"
+                ItemDisplayBinding="{Binding MedicationName}"
+                SelectedIndexChanged="Picker_SelectedIndexChanged"
+                SelectedItem="{Binding SelectedEntry}"
+                FontSize="Large"
+                />
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="*,*"
+              BackgroundColor="{StaticResource AppColor2}">
+            <Label  Grid.Column="0"
+                    Text="Седативный Эффект"
+                    TextColor="{StaticResource TextColor}"
+                    HorizontalOptions="Center"
+                />
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                HorizontalOptions="Center"
+                Text="{Binding CurrentSE}"
+                   TextColor="{StaticResource TextColor}"
+                   FontAttributes="Bold"/>
+            <Label Grid.Column="1"
+                Text="Антипcихотический Эффект" 
+                   TextColor="{StaticResource TextColor}"
+                   />
+            <Label Grid.Row="1"
+                   Grid.Column="1"                   
+                Text="{Binding CurrentAE}"
+                   TextColor="{StaticResource TextColor}"
+                   HorizontalOptions="Center" 
+                   FontAttributes="Bold"/>
+
+        </Grid>
+        <Grid RowDefinitions="*,*"
+                  ColumnDefinitions="*,*,*"
+              BackgroundColor="{StaticResource AppColor4}">
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Средняя суточная доза"
+                   TextColor="{StaticResource TextColor}"
+                   HorizontalOptions="Center"
+                />
+            <Label Grid.Row="0"
+                    Grid.Column="1"
+                    Text="Суточные дозы, применяемые в стационаре"
+                    TextColor="{StaticResource TextColor}"
+                    HorizontalOptions="Center"
+                />
+            <Label Grid.Row="0"
+            Grid.Column="2"
+            Text="Максимальная доза"
+            TextColor="{StaticResource TextColor}"
+            HorizontalOptions="Center"
+                />
+            <Label Grid.Row="1"
+            Grid.Column="0"
+            Text="{Binding CurrentAD}"
+            TextColor="{StaticResource TextColor}"
+            
+                />
+            <Label Grid.Row="1"
+            Grid.Column="1"
+            Text="{Binding CurrentADR}"
+            TextColor="{StaticResource TextColor}"
+            
+                />
+            <Label Grid.Row="1"
+            Grid.Column="2"
+            Text="{Binding CurrentMR}"
+            TextColor="{StaticResource TextColor}"
+            HorizontalOptions="Center"
+                />
+
+        </Grid>
+        <Label Text="Характеристика:"
+               TextColor="{StaticResource TextColor}"
+               HorizontalOptions="Center"/>
+        <Label Text="{Binding CurrentDetail}"
+               TextColor="{StaticResource TextColor}"
+               />
+
+    </VerticalStackLayout>
+    
+    <!--<CollectionView ItemsSource="{Binding LibraryEntries}"
+                    BackgroundColor="{StaticResource AppColor4}"
+                    SelectionMode="Single"
+                    SelectedItem="{Binding SelectedEntry}" 
+                   SelectionChanged="CollectionView_SelectionChanged"
+                    
+                     SelectionChangedCommand="{Binding EntryChangedCommand}"
+                    >
+       
+        
+        
+        <CollectionView.Header>
+            
+                <Label  BackgroundColor="{StaticResource AppColor1}"
+    Text="Библиотека Нейролептиков"
+       HorizontalOptions="FillAndExpand"                       
+       HorizontalTextAlignment="Center"
+       FontSize="Header"
+       TextColor="{StaticResource TextColor}"
+       />
+           
+        </CollectionView.Header>
+        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Grid Margin="15, 10, 15, 0"
+                    RowDefinitions="Auto"
+                      ColumnDefinitions="*"
+                      BackgroundColor="{StaticResource AppColor2}"
+                      VerticalOptions="Center">
+                    
+                    <Label 
+                        VerticalOptions="Center"
+                   FontSize="Large"
+                    TextColor="{StaticResource TextColor}"
+                   Text="{Binding MedicationName}"
+                        HorizontalOptions="Center"/>
+                    
+                </Grid>
+                
+                
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>-->
+    
+
+    
+
+</ContentPage>

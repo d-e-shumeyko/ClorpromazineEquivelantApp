@@ -1,4 +1,5 @@
-﻿using NeurolepticAppV3.MVVM.Views;
+﻿using NeurolepticAppV3.MVVM.ViewModels;
+using NeurolepticAppV3.MVVM.Views;
 
 namespace NeurolepticAppV3
 {

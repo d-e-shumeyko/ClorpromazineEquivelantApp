@@ -51,6 +51,10 @@
 Padding="15"
 RowDefinitions=".7*, .3*"
 BackgroundColor="{StaticResource AppColor2}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+           Tapped="TapGestureRecognizer_Tapped_1"/>
+            </Grid.GestureRecognizers>
             <Label
 Grid.Row="1"
 HorizontalOptions="Center"

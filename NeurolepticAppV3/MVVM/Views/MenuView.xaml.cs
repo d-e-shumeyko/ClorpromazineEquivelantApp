@@ -8,6 +8,7 @@ public partial class MenuView : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = new MenuViewModel();
+	
 	}
 	private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
 	{
@@ -21,4 +22,18 @@ public partial class MenuView : ContentPage
 		};
 		Navigation.PushAsync(converterView);
 	}
+
+    private void TapGestureRecognizer_Tapped_1(object sender, TappedEventArgs e)
+    {
+
+        var element =
+            (Grid)sender;
+        var option =
+             ((Label)element.Children.LastOrDefault()).Text;
+        var converterView = new LibraryView
+        {
+            BindingContext = new LibraryViewModel(option)
+        };
+        Navigation.PushAsync(converterView);
+    }
 }

@@ -53,7 +53,11 @@ namespace NeurolepticAppV3.MVVM.ViewModels
             {"Зуклопентиксол", 4.0f},
 
         };
+
+        // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         
+
+
 
         //info for future use
         /*

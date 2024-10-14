@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mct:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+             x:Class="NeurolepticAppV3.MVVM.Views.Popupview"
+           xmlns:page="clr-namespace:NeurolepticAppV3.MVVM.ViewModels"
+           >
+    <Grid WidthRequest="400" HeightRequest="600">
+        <Label  Text="{Binding CurrentMedEntry}"
+             FontSize="Large"
+             BackgroundColor="#5e39c4"
+         VerticalOptions="Start"
+         HorizontalOptions="Start"
+TextColor="white"/>
+    </Grid>
+    
+
+
+</mct:Popup>
