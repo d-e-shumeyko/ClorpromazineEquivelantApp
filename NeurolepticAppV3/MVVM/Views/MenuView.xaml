@@ -76,8 +76,10 @@ HorizontalOptions="Center"
 Text="О Нас"
 TextColor="{StaticResource TextColor}"
 VerticalTextAlignment="Center"/>
-            <Image Source="pfur.png"
-                   Aspect="Center"></Image>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer
+Tapped="TapGestureRecognizer_Tapped_2"/>
+            </Grid.GestureRecognizers>
         </Grid>
         <!--#endregion-->
 

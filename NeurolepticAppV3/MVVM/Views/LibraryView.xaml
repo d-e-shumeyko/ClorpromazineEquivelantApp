@@ -27,12 +27,14 @@
                FontSize="Medium"
                />
         <Picker ItemsSource="{Binding LibraryEntries}" 
-                BackgroundColor="{StaticResource AppColor3}"
+                BackgroundColor="{StaticResource AppColor4}"
                 TextColor="{StaticResource TextColor}"
                 ItemDisplayBinding="{Binding MedicationName}"
                 SelectedIndexChanged="Picker_SelectedIndexChanged"
                 SelectedItem="{Binding SelectedEntry}"
                 FontSize="Large"
+                Title="Выберете препарат"
+                TitleColor="{StaticResource AppColor1}"
                 />
         <Grid ColumnDefinitions="*,*"
               RowDefinitions="*,*"

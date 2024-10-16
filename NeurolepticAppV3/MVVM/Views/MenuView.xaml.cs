@@ -36,4 +36,17 @@ public partial class MenuView : ContentPage
         };
         Navigation.PushAsync(converterView);
     }
+
+    private void TapGestureRecognizer_Tapped_2(object sender, TappedEventArgs e)
+    {
+        var element =
+           (Grid)sender;
+        var option =
+             ((Label)element.Children.LastOrDefault()).Text;
+        var converterView = new AboutUsView
+        {
+            BindingContext = new AboutUsViewmodel(option)
+        };
+        Navigation.PushAsync(converterView);
+    }
 }

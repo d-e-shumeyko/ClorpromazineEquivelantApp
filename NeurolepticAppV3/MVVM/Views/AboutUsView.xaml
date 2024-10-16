@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NeurolepticAppV3.MVVM.Views.AboutUsView"
+             Title="AboutUsView">
+
+    <ContentPage.Resources>
+        <Color x:Key="AppColor1">#3a1b8f</Color>
+        <Color x:Key="AppColor2">#5e39c4</Color>
+        <Color x:Key="AppColor3">#7951e8</Color>
+        <Color x:Key="AppColor4">#9772fc</Color>
+        <Color x:Key="TextColor">white</Color>
+
+    </ContentPage.Resources>
+
+    <VerticalStackLayout BackgroundColor="{StaticResource AppColor1}">
+        <Image Source="pfur.png"
+Aspect="Center"
+               BackgroundColor="White"/>
+       
+        <Label Text="О Нас"
+               BackgroundColor="{StaticResource AppColor1}"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource TextColor}"
+               FontSize="Large"
+               FontAttributes="Bold"/>
+        <Label Text="Список Литературы:"
+                   TextColor="{StaticResource TextColor}"
+                   FontSize="Medium"/>
+        <VerticalStackLayout BackgroundColor="{StaticResource AppColor3}"
+                             Spacing="10">
+            <Label Text="Практикум по психиатрии / Коркина М. В., Артемьева М. С., Брюхин А. Е., Сулейманов Р., А., — 7-е издание,. — Москва: Российский университет дружбы народов, им. П.Лумумбы Издательство, 2024 — 350 c."
+                   TextColor="{StaticResource TextColor}"/>
+            <Label Text="Психиатрия : национальное руководство  [Текст] / Ю. А. Александровский, Н. Г. Незнанов. — 2-е издание,. — Москва: ГЭОТАР-Медиа, 2022 — 1008 c."
+        TextColor="{StaticResource TextColor}"/>
+        </VerticalStackLayout>
+        <Label Text="Авторы:"
+           TextColor="{StaticResource TextColor}"
+           FontSize="Medium"/>
+        <Grid ColumnDefinitions=".1*,.9*"
+              RowDefinitions="*,*,*,*,*,*"
+              BackgroundColor="{StaticResource AppColor2}">
+            <Label Grid.Column="1"
+                       Grid.Row="0"
+                       Text="Тер-Исраеллян Алексей Юрьевич, к.м.н., заведующий кафедрой"
+                       TextColor="{StaticResource TextColor}"/>
+            <Label Grid.Column="1"
+           Grid.Row="1"
+           Text="Артемьева Марина Станиславовна, д.м.н., профессор, зав. учебной частью"
+           TextColor="{StaticResource TextColor}"/>
+            <Label Grid.Column="1"
+           Grid.Row="2"
+           Text="Брюхин Андрей Евгеньевич, к.м.н., профессор"
+           TextColor="{StaticResource TextColor}"/>
+            <Label Grid.Column="1"
+                    Grid.Row="3"
+                    Text="Данилин Иван Евгеньевич, к.м.н., доцент-методист"
+                    TextColor="{StaticResource TextColor}"/>
+            <Label Grid.Column="1"
+                    Grid.Row="4"
+                    Text="Сулейманов Роман Александрович, доцент-методист"
+                    TextColor="{StaticResource TextColor}"/>
+            <Label Grid.Column="1"
+                    Grid.Row="5"
+                    Text="Шумейко Денис Евгеньевич, ассистент кафедры"
+                    TextColor="{StaticResource TextColor}"/>            
+        </Grid>
+        <Label Text="Программировал:"
+               TextColor="{StaticResource TextColor}"
+               FontSize="Medium"/>
+        <Label BackgroundColor="{StaticResource AppColor4}"
+        Text="Шумейко Денис Евгеньевич"
+        Padding="10"
+        TextColor="{StaticResource TextColor}"/>
+        <Label Text="Краткая история кафедры:"
+   TextColor="{StaticResource TextColor}"
+   FontSize="Medium"/>
+        <Label TextColor="{StaticResource TextColor}"
+               Padding="10"
+               BackgroundColor="{StaticResource AppColor3}"
+               Text="В 1965 г. была основана кафедра психиатрии в Университете дружбы народов им. П. Лумумбы под руководством профессора М. В. Коркиной. Основные направлений научной деятельности на кафедре были исследование в области нарушений пищевого поведения, психических расстройств при соматических заболеваниях и особых формах их лечения, а также впервые в СССР на кафедре психиатрии начали преподавать клиническую психологию."/>
+    </VerticalStackLayout>
+</ContentPage>
