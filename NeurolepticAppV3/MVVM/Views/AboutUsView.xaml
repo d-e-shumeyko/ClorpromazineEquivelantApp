@@ -12,7 +12,7 @@
         <Color x:Key="TextColor">white</Color>
 
     </ContentPage.Resources>
-
+    <ScrollView>
     <VerticalStackLayout BackgroundColor="{StaticResource AppColor1}">
         <Image Source="pfur.png"
 Aspect="Center"
@@ -80,4 +80,5 @@ Aspect="Center"
                BackgroundColor="{StaticResource AppColor3}"
                Text="В 1965 г. была основана кафедра психиатрии в Университете дружбы народов им. П. Лумумбы под руководством профессора М. В. Коркиной. Основные направлений научной деятельности на кафедре были исследование в области нарушений пищевого поведения, психических расстройств при соматических заболеваниях и особых формах их лечения, а также впервые в СССР на кафедре психиатрии начали преподавать клиническую психологию."/>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
